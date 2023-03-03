@@ -17,7 +17,19 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.prettierignore
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# Avoid accidental upload of the Sketch and Figma design files
+#####################################################
+/design
+*.sketch
+*.fig
+
+# Avoid accidental XD upload if you convert the design file
+###############################################
+*.xd
