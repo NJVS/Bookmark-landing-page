@@ -16,9 +16,8 @@
     ),
     mobile: (
       lg: 912px,
-      md: 768px,
-      sm: 608px,
-      xsm: 426px
+      md: 690px,
+      sm: 426px
     )
   );
   @media (#{$prefix}-width: deepMap($breakpoints, $device, $size)) {
