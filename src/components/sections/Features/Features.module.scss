@@ -1,0 +1,18 @@
+.container {
+  padding: 3rem 0 8rem;
+
+  // global container
+  >div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
