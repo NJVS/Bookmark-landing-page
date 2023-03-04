@@ -1,0 +1,55 @@
+@use '../../../assets/styles/utils.scss' as *;
+
+.container {
+  position: relative;
+  padding: 10rem 0;
+
+  >div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include breakpoint(mobile, lg) {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  figure {
+    // position: relative;
+
+    >div {
+      position: absolute;
+      top: 50%;
+      translate: 0 -45%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 30%;
+        left: 29%;
+        width: 50vw;
+        height: 75%;
+        background-color: var(--c-blue-400);
+        border-radius: 50vh 0 0 50vh;
+      }
+
+      >img {
+        position: relative;
+        height: 100%;
+        max-width: unset;
+      }
+    }
+  }
+}
