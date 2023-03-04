@@ -1,0 +1,97 @@
+@use '../../assets/styles/utils.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    margin-bottom: 1.5rem;
+    width: min(750px, 100%);
+    border-bottom: 1px solid var(--c-neutral-500);
+
+    button {
+      padding: 1.75rem 0;
+      border: none;
+      background-color: transparent;
+      color: var(--c-neutral-500);
+      font-weight: 500;
+      cursor: pointer;
+      transition: color 0.2s ease;
+
+      @include hover {
+        color: var(--c-red-400);
+      }
+
+      &.active {
+        color: var(--c-neutral-800);
+        border-bottom: 3px solid var(--c-red-400);
+      }
+    }
+  }
+
+  .articles {
+    position: relative;
+    padding: 5rem 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 25%;
+      right: 55%;
+      width: 50vw;
+      height: 90%;
+      background-color: var(--c-blue-400);
+      border-radius: 0 50vh 50vh 0;
+
+      @include breakpoint(mobile, lg) {
+        right: 60%;
+      }
+    }
+
+    li {
+      position: relative;
+      display: none;
+      grid-template-columns: 1.2fr 0.8fr;
+
+      @include breakpoint(mobile, lg) {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      &.active {
+        display: grid;
+      }
+
+      figure {
+        >div {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -100% -50%;
+
+          img {
+            position: relative;
+            max-width: unset;
+          }
+        }
+      }
+
+      article {
+        flex-grow: 1;
+        flex-basis: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+
+        .links {
+          display: flex;
+        }
+      }
+    }
+  }
+}
