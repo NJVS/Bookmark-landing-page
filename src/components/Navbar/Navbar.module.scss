@@ -1,6 +1,7 @@
 @use '../../assets/styles/utils.scss' as *;
 
 .container {
+  position: relative;
   width: 100%;
   background-color: var(--c-white);
 
@@ -39,7 +40,7 @@
       &:not([class]) {
         text-decoration: none;
         transition: all 0.2s ease;
-  
+
         @include hover {
           color: var(--c-red-400);
         }
@@ -48,8 +49,21 @@
   }
 }
 
+// NAVBAR HEADER
 .header {
   background-color: var(--c-white);
+  transition: background-color 0.2s ease;
+
+  // global container
+  @include breakpoint(mobile, md) {
+    >div {
+      justify-content: space-between;
+    }
+  }
+
+  .main_logo svg>g>path {
+    transition: all 0.2s ease;
+  }
 
   .nav_links {
     justify-content: flex-end;
@@ -59,9 +73,199 @@
     }
   }
 
+  // elements for mobile device
+  .nav_toggler {
+    display: none;
+    position: relative;
+    padding: 0;
+    width: 30px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 
+    @include hover {
+      &:not(.toggled)>span {
+        background-color: var(--c-blue-400);
+      }
+    }
+
+    // lines
+    >span {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      translate: 0 -50%;
+      width: 90%;
+      height: 4px;
+      background-color: var(--c-neutral-800);
+      border-radius: 50vh;
+      transition: all 0.2s ease;
+
+      &:nth-of-type(1) {
+        top: 30%;
+      }
+
+      &:nth-of-type(2) {
+        width: 65%;
+      }
+
+      &:nth-of-type(3) {
+        top: 70%;
+        width: 80%;
+      }
+    }
+
+    @include breakpoint(mobile, md) {
+      display: block;
+    }
+  }
+
+  .nav_overlay {
+    position: absolute;
+    top: 88px;
+    left: 0;
+    right: 0;
+    height: calc(100vh - 88px);
+    background-color: rgba(#000, 0.5);
+    z-index: 98;
+    backdrop-filter: blur(6px);
+    transition: all 0.2s ease;
+
+    // hide
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    &.toggled {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  .sidenav_links {
+    position: absolute;
+    top: 88px;
+    // right: 0;
+    right: -100%;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.75rem 0 0 0;
+    width: 300px;
+    height: calc(100vh - 88px);
+    background-color: var(--c-white);
+    z-index: 99;
+    transition: all 0.2s ease;
+
+    &.toggled {
+      right: 0;
+    }
+
+    >li:not(:last-of-type) {
+
+      >a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.75rem;
+        margin-left: 1rem;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 50vh 0 0 50vh;
+        color: var(--c-blue-700);
+        font-weight: 500;
+        // text-align: right;
+        text-decoration: none;
+
+        svg {
+          width: 20px;
+          fill: var(--c-blue-700);
+        }
+
+        &.active {
+          background-color: var(--c-blue-700);
+          color: var(--c-neutral-100);
+
+          svg {
+            fill: var(--c-neutral-100);
+          }
+        }
+      }
+    }
+
+    >li:last-of-type {
+      flex-grow: 1;
+      align-items: flex-end;
+      justify-content: flex-start;
+
+      >div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        padding: 2rem 1rem;
+        background-color: var(--c-blue-700);
+      }
+
+      .nav_socials {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+      }
+
+      a {
+        display: flex;
+        width: 100%;
+      }
+    }
+  }
+
+  // side nav toggled
+  &.sidenav_toggled {
+    background-color: var(--c-blue-700);
+
+    .main_logo svg>g>path {
+      fill: var(--c-white);
+    }
+
+    .nav_toggler {
+      >span {
+        background-color: var(--c-white);
+
+        &:nth-of-type(1) {
+          width: 100%;
+          top: 50%;
+          rotate: -45deg
+        }
+
+        &:nth-of-type(2) {
+          right: -50%;
+          opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+          width: 100%;
+          top: 50%;
+          rotate: 45deg;
+        }
+      }
+    }
+
+    .sidenav_links {
+      right: 0px;
+    }
+
+    .nav_overlay {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
 }
 
+
+// NAVBAR FOOTER
 .footer {
   background-color: var(--c-blue-700);
 
@@ -93,6 +297,25 @@
           fill: var(--c-red-400);
         }
       }
+    }
+  }
+
+  // media query
+  @include breakpoint(mobile, md) {
+
+    >div {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .nav_links {
+      justify-content: flex-end;
+    }
+
+    .nav_socials {
+      width: 100%;
+      justify-content: flex-end;
     }
   }
 }
