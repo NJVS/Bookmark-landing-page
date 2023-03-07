@@ -3,7 +3,12 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 6.5rem;
+
+  @include breakpoint(mobile, md) {
+    gap: 3.5rem;
+    
+  }
 
   .nav {
     display: grid;
@@ -12,6 +17,10 @@
     margin-bottom: 1.5rem;
     width: min(750px, 100%);
     border-bottom: 1px solid var(--c-neutral-500);
+
+    @include breakpoint(mobile, md) {
+      width: min(425px, 100%);
+    }
 
     button {
       padding: 1.75rem 0;
@@ -22,20 +31,39 @@
       cursor: pointer;
       transition: color 0.2s ease;
 
+      @include breakpoint(mobile, md) {
+        padding: 1.25rem 0;
+      }
+
+      // on mobile only
+      svg {
+        height: 20px;
+        fill: var(--c-neutral-500);
+        transition: fill 0.2s ease;
+      }
+
       @include hover {
         color: var(--c-red-400);
+
+        svg {
+          fill: var(--c-red-400);
+        }
       }
 
       &.active {
         color: var(--c-neutral-800);
         border-bottom: 3px solid var(--c-red-400);
+
+        svg {
+          fill: var(--c-neutral-800);
+        }
       }
     }
   }
 
   .articles {
     position: relative;
-    padding: 5rem 0;
+    // padding: 5rem 0;
 
     &::before {
       content: '';
@@ -43,12 +71,23 @@
       top: 25%;
       right: 55%;
       width: 50vw;
-      height: 90%;
+      height: 130%;
       background-color: var(--c-blue-400);
       border-radius: 0 50vh 50vh 0;
 
       @include breakpoint(mobile, lg) {
         right: 60%;
+      }
+
+      @include breakpoint(mobile, md) {
+        content: '';
+          position: absolute;
+          top: 15%;
+          right: 20%;
+          width: 100vw;
+          height: 50vw;
+          background-color: var(--c-blue-400);
+          border-radius: 0 50vh 50vh 0;
       }
     }
 
@@ -57,16 +96,29 @@
       display: none;
       grid-template-columns: 1.2fr 0.8fr;
 
-      @include breakpoint(mobile, lg) {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-      }
-
       &.active {
         display: grid;
+
+        @include breakpoint(mobile, lg) {
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+        }
+
+        @include breakpoint(mobile, md) {
+          display: flex;
+          flex-direction: column;
+          gap: 5.5rem;
+        }
       }
 
       figure {
+
+        @include breakpoint(mobile, md) {
+          position: relative;
+          width: min(615px, 100%);
+          aspect-ratio: 615/410;
+        }
+
         >div {
           position: absolute;
           top: 50%;
@@ -76,6 +128,17 @@
           img {
             position: relative;
             max-width: unset;
+          }
+
+          @include breakpoint(mobile, md) {
+            top: unset;
+            bottom: 0;
+            translate: -50% 0;
+            width: 90%;
+
+            img {
+              width: 100%;
+            }
           }
         }
       }
@@ -90,6 +153,11 @@
 
         .links {
           display: flex;
+        }
+
+        @include breakpoint(mobile, md) {
+          align-items: center;
+          text-align: center;
         }
       }
     }
