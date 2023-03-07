@@ -21,7 +21,7 @@ export default Navbar
 
 const NavHeader = () => {
   const [navToggled, setNavToggled] = useState(false);
-  const [mediaQuery, setMediaQuery] = useState(null);
+  const [mediaQuery, setMediaQuery] = useState(1920);
 
   function resizeHandler() {
     setMediaQuery(window.innerWidth)
