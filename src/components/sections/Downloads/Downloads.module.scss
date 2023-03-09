@@ -1,0 +1,47 @@
+@use '../../../assets/styles/utils.scss' as *;
+
+.container {
+  padding: 8rem 0;
+
+  >div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+
+    > p {
+      width: min(500px, 100%);
+    }
+  }
+
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 2rem;
+
+    >div {
+      &:nth-of-type(2) {
+        translate: 0 10%;
+      }
+      &:nth-of-type(3) {
+        translate: 0 20%;
+      }
+    }
+
+    @include breakpoint(mobile, md) {
+      gap: 2rem;
+      >div {
+        translate: 0 !important;
+      }
+    }
+  }
+}
