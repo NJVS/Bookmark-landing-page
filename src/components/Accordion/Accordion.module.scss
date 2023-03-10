@@ -1,0 +1,61 @@
+@use '../../assets/styles/utils.scss' as *;
+
+.container {
+  border-top: 1px solid var(--c-neutral-400);
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--c-neutral-400);
+
+    >button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1rem 1rem 0;
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      color: var(--c-neutral-600);
+      font-size: var(--fs-600);
+      font-weight: 500;
+      text-align: left;
+      transition: all 0.2s ease;
+      cursor: pointer;
+
+      svg,
+      svg path {
+        transition: all 0.2s ease;
+      }
+
+      @include hover {
+        color: var(--c-red-400);
+      }
+    }
+
+    >p {
+      max-height: 0;
+      width: 100%;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    &.active {
+      >button {
+        color: var(--c-neutral-900);
+
+        svg {
+          rotate: -180deg;
+
+          path {
+            stroke: var(--c-red-400);
+          }
+        }
+      }
+
+      >p {
+        margin: 1rem 0 1.25rem;
+      }
+    }
+  }
+}
