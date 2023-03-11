@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Frontend Mentor - Bookmark landing page solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The challenge
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Receive an error message when the newsletter form is submitted if:
+  - The input field is empty
+  - The email address is not formatted correctly
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Screenshot
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<table>
+  <tr>
+    <td valign="top">
+        Desktop
+        <img src="./ss_desktop.png">
+    </td>
+    <td valign="top">
+        Tablet
+        <img src="./ss_tablet.png">
+    </td>
+    <td valign="top">
+        Phone
+        <img src="./ss_phone.png">
+    </td>
+    <td valign="top">
+        Phone
+        <img src="./ss_phone_active.png">
+    </td>
+  </tr>
+</table>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Links
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Live Demo](https://njvs.github.io/bookmark-landing-page/)
 
-### `npm run eject`
+## My process
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Built with
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Semantic HTML5 markup
+- CSS custom properties
+- Javascript
+- [React](https://reactjs.org/) - JS library
+- [SASS/SCSS](https://sass-lang.com) - CSS preprocessor
+- Flexbox
+- CSS Grid
+- Responsive Web Design
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### What I learned
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+There's nothing special about this challenge, but I did enjoy it. I've already tried most of the components on this project using vanilla JavaScript; I just need to recreate them with ReactJS.
 
-## Learn More
+Like the "Accordion Component," for example, I've done it multiple times on my other projects, and what I've done differently is make the accordion as reusable as much as possible (i think LOL). 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```jsx
+import { Accordion, AccordionItem } from './components/Accordion';
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+export default const Example = () => {
+  return (
+    <Accordion>
+      <AccordionItem header="What is Bookmark?">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </AccordionItem>
 
-### Code Splitting
+      <AccordionItem header="How can I request a new browser?">
+        Quisque eget luctus mi, vehicula mollis lorem. Proin fringilla
+        vel erat quis sodales. Nam ex enim, eleifend venenatis lectus
+        vitae, accumsan auctor mi.
+      </AccordionItem>
+    </Accordion>
+  )
+}
+```
+My accordion is heavily inspired from a library [React-Accordion](https://github.com/szhsin/react-accordion)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Useful resources
+- [React-Accordion](https://github.com/szhsin/react-accordion)
+- [Javascript.info](https://javascript.info) - From the basics to advanced topics with simple, but detailed explanations.
+- [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [An opinionated styleguide for writing sane, maintainable and scalable Sass.](https://sass-guidelin.es/)
