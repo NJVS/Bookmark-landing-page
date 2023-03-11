@@ -1,5 +1,11 @@
+@use '../../../assets/styles/utils.scss' as *;
+
 .container {
   padding: 3rem 0 8rem;
+
+  @include breakpoint(mobile, md) {
+    padding: 3rem 0;
+  }
 
   // global container
   >div {

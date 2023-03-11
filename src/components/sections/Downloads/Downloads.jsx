@@ -25,7 +25,7 @@ const Downloads = () => {
         </div>
         <div className={styles.body}>
           {cardData.map(item => (
-            <CardDownload logo={item.logo} name={item.name} version={item.version} />
+            <CardDownload key={item.name} logo={item.logo} name={item.name} version={item.version} />
           ))}
         </div>
       </div>

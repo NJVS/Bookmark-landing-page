@@ -29,6 +29,10 @@
     justify-content: center;
     gap: 1.5rem;
 
+    > p {
+      width: min(450px, 100%);
+    }
+
     .links {
       display: flex;
       flex-wrap: nowrap;

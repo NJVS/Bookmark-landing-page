@@ -41,7 +41,6 @@ const Tabs = () => {
 
   function resizeHandler() {
     setMediaQuery(window.innerWidth);
-    console.log(window.innerWidth);
   }
 
   useEffect(() => {

@@ -1,5 +1,11 @@
+@use '../../../assets/styles/utils.scss' as *;
+
 .container {
   padding: 8rem 0;
+
+  @include breakpoint(mobile, md) {
+    padding: 3rem 0 8rem;
+  }
 
   >div {
     display: flex;
