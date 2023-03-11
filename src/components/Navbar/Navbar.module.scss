@@ -302,20 +302,23 @@
 
   // media query
   @include breakpoint(mobile, md) {
-
     >div {
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
+      gap: 1.5rem
     }
-
-    .nav_links {
-      justify-content: flex-end;
-    }
-
-    .nav_socials {
+  
+    .main_logo {
+      justify-self: center;
       width: 100%;
-      justify-content: flex-end;
+    }
+  }
+  @include breakpoint(mobile, sm) {
+    > div,
+    .nav_links {
+      justify-content: center;
+    }
+    .main_logo {
+      width: auto;
     }
   }
 }
