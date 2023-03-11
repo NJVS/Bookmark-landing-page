@@ -21,15 +21,22 @@ export default Navbar
 
 const NavHeader = () => {
   const [navToggled, setNavToggled] = useState(false);
-  const [mediaQuery, setMediaQuery] = useState(1920);
+  const [mediaQuery, setMediaQuery] = useState(null);
 
   function resizeHandler() {
     setMediaQuery(window.innerWidth)
+    setNavToggled(false);
   }
 
   useEffect(() => {
     window.addEventListener('resize', resizeHandler);
-  }, [])
+    setMediaQuery(window.innerWidth)
+  }, []);
+
+  // disable scrolling
+  useEffect(() => {
+    document.documentElement.style.overflow = navToggled ? 'hidden' : '';
+  }, [navToggled]);
 
   return (
     <nav className={`${styles.container} ${styles.header} ${navToggled && styles.sidenav_toggled}`}>
