@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/bookmark-landing-page/static/css/main.75b33450.css",
+    "main.js": "/bookmark-landing-page/static/js/main.7f3427e1.js",
+    "static/media/illustration-features-tab-3.svg": "/bookmark-landing-page/static/media/illustration-features-tab-3.a4206aab7946773b29b702492d2d014b.svg",
+    "static/media/illustration-features-tab-2.svg": "/bookmark-landing-page/static/media/illustration-features-tab-2.e933bd6d921c537d7743e08ea4ec488e.svg",
+    "static/media/illustration-hero.svg": "/bookmark-landing-page/static/media/illustration-hero.07801d05cb11930f0c826add8c05ce22.svg",
+    "static/media/logo-bookmark.svg": "/bookmark-landing-page/static/media/logo-bookmark.edcb09ac4b67d811b5c7fe0e738df436.svg",
+    "static/media/illustration-features-tab-1.svg": "/bookmark-landing-page/static/media/illustration-features-tab-1.0da3d302207bcad90cdadc5052e35ed6.svg",
+    "static/media/hand-holding-dollar-solid.svg": "/bookmark-landing-page/static/media/hand-holding-dollar-solid.129a3b8392259451816c3b1db32f3907.svg",
+    "static/media/share-from-square-regular.svg": "/bookmark-landing-page/static/media/share-from-square-regular.6f9b1c72ce90b01e8bba6240116e11bf.svg",
+    "static/media/logo-chrome.svg": "/bookmark-landing-page/static/media/logo-chrome.a42815a014c452e4d95851f7a8daf95b.svg",
+    "static/media/logo-firefox.svg": "/bookmark-landing-page/static/media/logo-firefox.a9e6ca53e8cfd641e556b7afb1f0085f.svg",
+    "static/media/list-solid.svg": "/bookmark-landing-page/static/media/list-solid.d7ed2d72fbbea07633488e080b8f3fba.svg",
+    "index.html": "/bookmark-landing-page/index.html",
+    "static/media/bg-dots.svg": "/bookmark-landing-page/static/media/bg-dots.90f0b46cec8b5f7cfd12393cb5f391a7.svg",
+    "static/media/envelope-regular.svg": "/bookmark-landing-page/static/media/envelope-regular.30e38c5430f3e330a2f839e8445d4714.svg",
+    "static/media/logo-twitter.svg": "/bookmark-landing-page/static/media/logo-twitter.dde79e7edd3892319de2ee22ea7ca39d.svg",
+    "static/media/magnifying-glass-solid.svg": "/bookmark-landing-page/static/media/magnifying-glass-solid.bf7c00a4cf3b50288170bca48fe9fd9a.svg",
+    "static/media/bookmark-regular.svg": "/bookmark-landing-page/static/media/bookmark-regular.44016df9cfdd366aa09f0bfe267d82ce.svg",
+    "static/media/logo-facebook.svg": "/bookmark-landing-page/static/media/logo-facebook.8b45ba94b5f75f0d38a9bbcc11df55c2.svg",
+    "static/media/icon-error.svg": "/bookmark-landing-page/static/media/icon-error.a46cc66573dea1a15acb0dd260693083.svg",
+    "static/media/logo-opera.svg": "/bookmark-landing-page/static/media/logo-opera.ff14e4763945338fe002017c72e7e597.svg",
+    "static/media/icon-arrow.svg": "/bookmark-landing-page/static/media/icon-arrow.8174203a5d4fc44f5247b825de6e2158.svg",
+    "main.75b33450.css.map": "/bookmark-landing-page/static/css/main.75b33450.css.map",
+    "main.7f3427e1.js.map": "/bookmark-landing-page/static/js/main.7f3427e1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75b33450.css",
+    "static/js/main.7f3427e1.js"
+  ]
+}
